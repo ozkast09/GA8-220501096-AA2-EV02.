@@ -1,13 +1,13 @@
-package com.minimercadola43.app.data.repository;
+package com.example.minimercadola43.data.repository;
 
 import android.app.Application;
 import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
 
-import com.minimercadola43.app.data.local.dao.ProductDao;
-import com.minimercadola43.app.data.local.database.AppDatabase;
-import com.minimercadola43.app.data.local.entity.ProductEntity;
+import com.example.minimercadola43.data.local.dao.ProductDao;
+import com.example.minimercadola43.data.local.database.AppDatabase;
+import com.example.minimercadola43.data.local.entity.ProductEntity;
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;

@@ -1,4 +1,4 @@
-package com.minimercadola43.app.data.local.entity;
+package com.example.minimercadola43.data.local.entity;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -55,5 +55,40 @@ public class ProductEntity {
         this.name = name;
     }
 
-    // Completa el resto de getters y setters...
+    public double getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(double quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getSupplier() {
+        return supplier;
+    }
+
 }

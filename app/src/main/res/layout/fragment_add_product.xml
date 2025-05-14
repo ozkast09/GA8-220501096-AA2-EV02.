@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingresar Nuevo Producto"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Nombre del Producto -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del Producto:"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/editTextProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese el nombre del producto"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Cantidad Inicial -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cantidad Inicial:"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/editTextInitialQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese la cantidad inicial"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Unidad de Medida -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unidad de Medida:"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <Spinner
+                android:id="@+id/spinnerUnit"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/editTextNewUnit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Nueva Unidad"/>
+            <Button
+                android:id="@+id/btnCreateUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear Medida"
+                android:backgroundTint="#2196F3"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <!-- Marca -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marca:"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <Spinner
+                android:id="@+id/spinnerBrand"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/editTextNewBrand"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Nueva Marca"/>
+            <Button
+                android:id="@+id/btnCreateBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear Marca"
+                android:backgroundTint="#2196F3"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <!-- Ubicación -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubicación:"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <Spinner
+                android:id="@+id/spinnerLocation"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/editTextNewLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Nueva Ubicación"/>
+            <Button
+                android:id="@+id/btnCreateLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear Ubicación"
+                android:backgroundTint="#2196F3"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <!-- Proveedor -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proveedor:"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+            <Spinner
+                android:id="@+id/spinnerSupplier"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/editTextNewSupplier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Nuevo Proveedor"/>
+            <Button
+                android:id="@+id/btnCreateSupplier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear Proveedor"
+                android:backgroundTint="#2196F3"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCreateProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear Producto"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+</ScrollView>

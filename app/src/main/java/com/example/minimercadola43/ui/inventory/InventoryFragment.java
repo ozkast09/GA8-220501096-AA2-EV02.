@@ -1,4 +1,4 @@
-package com.minimercadola43.app.ui.inventory;
+package com.example.minimercadola43.ui.inventory;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,11 +10,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import com.minimercadola43.app.databinding.FragmentInventoryBinding;
-import com.minimercadola43.app.ui.product.ProductAdapter;
-import com.minimercadola43.app.ui.product.ProductViewModel;
+import com.example.minimercadola43.databinding.FragmentInventoryBinding;
+import com.example.minimercadola43.ui.product.ProductAdapter;
+import com.example.minimercadola43.ui.product.ProductViewModel;
+
+import java.util.ArrayList;
 
 public class InventoryFragment extends Fragment {
 
@@ -42,7 +43,8 @@ public class InventoryFragment extends Fragment {
 
         // Observar cambios en la lista de productos
         productViewModel.getAllProducts().observe(getViewLifecycleOwner(), products -> {
-            adapter.setProducts(products);
+            // Si products es null, pasa una lista vacía; si no, pasa una nueva instancia
+            adapter.submitList(products == null ? new ArrayList<>() : new ArrayList<>(products));
         });
     }
 

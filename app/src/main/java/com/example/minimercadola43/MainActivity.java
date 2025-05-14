@@ -1,4 +1,4 @@
-package com.minimercadola43.app;
+package com.example.minimercadola43;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,11 +8,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.minimercadola43.app.databinding.ActivityMainBinding;
-import com.minimercadola43.app.ui.inventory.InventoryFragment;
-import com.minimercadola43.app.ui.product.add.AddProductFragment;
-import com.minimercadola43.app.ui.product.update.UpdateProductFragment;
-import com.minimercadola43.app.ui.sales.SalesFragment;
+import com.example.minimercadola43.databinding.ActivityMainBinding;
+import com.example.minimercadola43.ui.inventory.InventoryFragment;
+import com.example.minimercadola43.ui.product.add.AddProductFragment;
+import com.example.minimercadola43.ui.product.update.UpdateProductFragment;
+import com.example.minimercadola43.ui.sales.SalesFragment;
 
 public class MainActivity extends AppCompatActivity {
 

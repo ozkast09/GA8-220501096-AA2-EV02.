@@ -1,4 +1,4 @@
-package com.minimercadola43.app.data.local.database;
+package com.example.minimercadola43.data.local.database;
 
 import android.content.Context;
 
@@ -6,8 +6,10 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import com.minimercadola43.app.data.local.dao.ProductDao;
-import com.minimercadola43.app.data.local.entity.ProductEntity;
+import com.example.minimercadola43.data.local.dao.ProductDao;
+import com.example.minimercadola43.data.local.entity.ProductEntity;
+import com.example.minimercadola43.data.local.dao.ProductDao;
+import com.example.minimercadola43.data.local.entity.ProductEntity;
 
 @Database(entities = {ProductEntity.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {

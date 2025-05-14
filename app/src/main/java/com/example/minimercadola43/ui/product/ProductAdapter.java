@@ -1,4 +1,4 @@
-package com.minimercadola43.app.ui.product;
+package com.example.minimercadola43.ui.product;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,17 +6,37 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.minimercadola43.app.R;
-import com.minimercadola43.app.data.local.entity.ProductEntity;
+import com.example.minimercadola43.R;
+import com.example.minimercadola43.data.local.entity.ProductEntity;
 
-import java.util.ArrayList;
-import java.util.List;
+public class ProductAdapter extends ListAdapter<ProductEntity, ProductAdapter.ProductViewHolder> {
 
-public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
+    public ProductAdapter() {
+        super(DIFF_CALLBACK);
+    }
 
-    private List<ProductEntity> products = new ArrayList<>();
+    private static final DiffUtil.ItemCallback<ProductEntity> DIFF_CALLBACK =
+            new DiffUtil.ItemCallback<ProductEntity>() {
+                @Override
+                public boolean areItemsTheSame(ProductEntity oldItem, ProductEntity newItem) {
+                    return oldItem.getId() == newItem.getId();
+                }
+
+                @Override
+                public boolean areContentsTheSame(ProductEntity oldItem, ProductEntity newItem) {
+                    // Comparación de todos los campos relevantes
+                    return oldItem.getName().equals(newItem.getName()) &&
+                            oldItem.getQuantity() == newItem.getQuantity() &&
+                            oldItem.getUnit().equals(newItem.getUnit()) &&
+                            oldItem.getLocation().equals(newItem.getLocation()) &&
+                            oldItem.getBrand().equals(newItem.getBrand()) &&
+                            oldItem.getSupplier().equals(newItem.getSupplier());
+                }
+            };
 
     @NonNull
     @Override
@@ -28,23 +48,13 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
-        ProductEntity currentProduct = products.get(position);
+        ProductEntity currentProduct = getItem(position);
         holder.textViewName.setText(currentProduct.getName());
         holder.textViewQuantity.setText(String.valueOf(currentProduct.getQuantity()));
         holder.textViewUnit.setText(currentProduct.getUnit());
         holder.textViewLocation.setText(currentProduct.getLocation());
         holder.textViewBrand.setText(currentProduct.getBrand());
         holder.textViewSupplier.setText(currentProduct.getSupplier());
-    }
-
-    @Override
-    public int getItemCount() {
-        return products.size();
-    }
-
-    public void setProducts(List<ProductEntity> products) {
-        this.products = products;
-        notifyDataSetChanged();
     }
 
     static class ProductViewHolder extends RecyclerView.ViewHolder {
@@ -66,3 +76,4 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         }
     }
 }
+

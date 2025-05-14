@@ -1,4 +1,4 @@
-package com.minimercadola43.app.ui.product;
+package com.example.minimercadola43.ui.product;
 
 import android.app.Application;
 
@@ -6,8 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.minimercadola43.app.data.local.entity.ProductEntity;
-import com.minimercadola43.app.data.repository.ProductRepository;
+import com.example.minimercadola43.data.local.entity.ProductEntity;
+import com.example.minimercadola43.data.repository.ProductRepository;
 
 import java.util.List;
 

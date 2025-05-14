@@ -1,4 +1,4 @@
-package com.minimercadola43.app.data.local.dao;
+package com.example.minimercadola43.data.local.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -7,7 +7,7 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.minimercadola43.app.data.local.entity.ProductEntity;
+import com.example.minimercadola43.data.local.entity.ProductEntity;
 
 import java.util.List;
 
